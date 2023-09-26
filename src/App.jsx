@@ -1,14 +1,20 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-function App() {
+import Home from "./pages/Home";
+import Confirmation from "./pages/Confirmation";
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "confirmation",
+    element: <Confirmation />,
+  },
+]);
 
-  return <>
-    <p>Hello world</p>
-  </>;
+export default function App() {
+  return <RouterProvider router={router} />;
 }
-
-export default App;
