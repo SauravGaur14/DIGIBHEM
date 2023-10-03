@@ -82,8 +82,6 @@ export default function Home() {
     }
 
     return dateCount;
-
-    // return diffDays;
   }
 
   function roomCostCalculator(days) {
@@ -119,6 +117,7 @@ export default function Home() {
 
   function calculateCost(e) {
     e.preventDefault();
+    
     // Calculate the number of days between check-in and check-out dates
     const days = calcDays(checkinDate, checkoutDate);
 
@@ -288,6 +287,7 @@ export default function Home() {
               type="number"
               max={totalCost}
               min={1000}
+              required
               className="mb-5 mt-2 h-12 w-96 rounded-2xl pl-5 pr-5 outline-none focus:outline-[0.5px] focus:outline-slate-300"
               onChange={advanceChangeHandler}
             />
