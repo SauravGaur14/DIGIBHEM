@@ -1,4 +1,4 @@
-export default function Input({ label, type, placeholder, value, onChange}) {
+export default function Input({ label, type, placeholder, value, required, onChange}) {
   return (
     <div className="flex font-sourceCodePro flex-col justify-center gap-x-5">
       <label className="text-2xl font-black font-serif">{label}</label>
@@ -8,6 +8,7 @@ export default function Input({ label, type, placeholder, value, onChange}) {
         placeholder={placeholder}
         value={value}
         onChange={onChange}
+        required = {required}
       />
     </div>
   );
